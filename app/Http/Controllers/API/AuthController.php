@@ -15,13 +15,15 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
-                'message' => 'Unauthorized'
+                'status'    => 0,
+                'message'   => 'Unauthorized'
             ], 401);
         }
 
         $token = $user->createToken('token')->plainTextToken;
 
         return response()->json([
+            'status'    => 1,
             'message'   => 'Success',
             'user'      =>  $user,
             'token'     =>  $token,
@@ -32,6 +34,7 @@ class AuthController extends Controller
         $request->user()->currentAccessToken()->delete();
 
         return response()->json([
+            'status'    => 1,
             'message'   => 'Logout success'
         ], 200);
     }
