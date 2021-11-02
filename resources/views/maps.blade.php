@@ -26,7 +26,7 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaHVyYXNhbiIsImEiOiJja3ZnNGo4cGIwOTFnMnZvMWNoZDh2aXkzIn0.8n65QEcSRJYcjyjdRqIStg';
+    mapboxgl.accessToken = 'ACCESS TOKKEN';
 
     function change() {
         const map = new mapboxgl.Map({
