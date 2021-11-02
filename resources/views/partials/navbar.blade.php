@@ -19,6 +19,9 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('categories') ? 'active' : '' }}" href="/categories">Categories</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('maps') ? 'active' : '' }}" href="/maps">Maps</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth

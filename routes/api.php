@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\CategoriesController;
 use App\Http\Controllers\API\PostController;
 use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
@@ -25,6 +26,7 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/post', [PostController::class, 'index']);
+    Route::get('/categories', [CategoriesController::class, 'index']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
 
